@@ -1,0 +1,61 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif; /* Matn shrifti */
+    background-color: #f4f4f4; /* Fon rangi */
+    margin: 0; /* Marginni olib tashlash */
+    padding: 20px; /* Ichki bo'shliq */
+}
+
+h1 {
+    text-align: center; /* H1 sarlavhasi markazga joylashadi */
+    color: #333; /* Rang */
+}
+
+/* Table styles */
+table {
+    width: 100%; /* Table kengligi */
+    border-collapse: collapse; /* Chegaralarni birlashtirish */
+    margin: 20px 0; /* Margin */
+}
+
+th, td {
+    padding: 12px; /* Ichki bo'shliq */
+    text-align: left; /* Matnni chapga joylashtirish */
+    border-bottom: 1px solid #ddd; /* Pastki chegara */
+}
+
+th {
+    background-color: #4CAF50; /* Sarlavhalar uchun fon rangi */
+    color: white; /* Matn rangi */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Kursor ustida turganda fon rangi */
+}
+
+/* Empty message styles */
+td[colspan="5"] {
+    text-align: center; /* Markazga joylashtirish */
+    color: #999; /* Rang */
+}
+
+
+
+
+.link-container {
+    text-align: center;  /* Markazlashtirish */
+    margin-top: 20px;  /* Yuqoridan bo'sh joy */
+}
+
+.link-button {
+    display: inline-block;  /* Inline-block sifatida ko'rsatish */
+    padding: 10px 20px;  /* Yuqoridan va pastdan bo'sh joy */
+    background-color: #007bff;  /* Tugma fon rangi */
+    color: white;  /* Matn rangi */
+    border-radius: 5px;  /* Burchaklarni yumshatish */
+    text-decoration: none;  /* Chiziqni olib tashlash */
+}
+
+.link-button:hover {
+    background-color: #0056b3;  /* Hover holati uchun fon rangi */
+}

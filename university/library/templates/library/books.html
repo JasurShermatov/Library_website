@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    {% load static %}  <!-- Static tagini yuklash -->
+    <link rel="stylesheet" type="text/css" href="{% static 'library/books.css' %}">
+</head>
+<body>
+    <h1>Books:</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="search" placeholder="Search books" {% if curr_result %} value="{{ curr_result }}" {% endif %}>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Agar kitoblar mavjud bo'lsa -->
+    {% if books %}
+    <ul>
+        {% for book in books %}
+        <li>
+            <strong>{{ book.title }}</strong> by {{ book.author }}<br>
+            Pages: {{ book.pages }}<br>
+            {% if book.book_file %}
+                <a href="{{ book.book_file.url }}" download >Download Book</a>  <!-- Kitobni yuklab olish tugmasi -->
+            {% else %}
+                <span>No file available</span>  <!-- Agar fayl yo'q bo'lsa -->
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Agar hech qanday kitob topilmasa -->
+    {% else %}
+    <ul>
+        <li>No books found for "{{ curr_result }}"</li>
+    </ul>
+    {% endif %}
+
+    <!-- Main page ga o'tish uchun link -->
+    <div class="link-container">
+        <a href="{% url 'main_page' %}" class="link-button">Main Page ga o'tish</a>
+    </div>
+</body>
+</html>

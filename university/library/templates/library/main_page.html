@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosh sahifa</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'library/main_page.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background-image: url('https://png.pngtree.com/background/20231101/original/pngtree-d-rendering-of-a-pristine-white-computer-screen-displaying-a-library-picture-image_5822731.jpg'); /* Rasm linkini bu yerga qo'shing */
+            background-size: cover; /* Rasmni to'liq ekran qamrab olish uchun */
+            background-position: center; /* Rasmni markazga joylashtirish */
+            height: 100vh; /* Barcha bo'sh joyni qamrab olish */
+            margin: 0; /* Marginlarni olib tashlash */
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <h1><a href="/" style="text-decoration: none; color: black">Jasurbek's library</a></h1>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="{% url 'books' %}"><h4>All Books</h4></a></li>
+            <li><a href="{% url 'book_create' %}"><h4>Book-add</h4></a></li>
+            <li><a href="{% url 'forma' %}"><h4>Registration</h4></a></li>
+             <li><a href="{% url 'users_list' %}"><h4>Users-list</h4></a></li>
+        </ul>
+    </div>
+</nav>
+<div>
+<footer>
+    <h3>&copy; 2024 Jasurbek's library, everybody can get book after registration from library registration department:</h3>
+    <p>
+        Contact us:
+        <a href="https://t.me/Shermatov_J05" target="_blank" style="color: black; text-decoration: none;">
+            <i class="fab fa-telegram" style="font-size: 20px;"></i>
+            <b>Telegram</b>
+        </a>
+        |
+        <a href="https://www.instagram.com/jasurbek.py" target="_blank" style="color: black; text-decoration: none;">
+            <i class="fab fa-instagram" style="font-size: 20px;"></i>
+            <b>Instagram</b>
+        </a>
+       <b>+998 977722146  |  shermatovjasur800@gmail.com</b>
+    </p>
+</footer>
+</div>
+</body>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+</script>
+</html>

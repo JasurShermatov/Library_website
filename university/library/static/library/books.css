@@ -1,0 +1,80 @@
+/* Umumiy tanlovlar */
+body {
+    font-family: Arial, sans-serif; /* Font o'zgarishi */
+    line-height: 1.6; /* Satrlar orasidagi masofa */
+    margin: 0; /* Marginni olib tashlash */
+    padding: 0; /* Paddingni olib tashlash */
+    background-color: #f4f4f4; /* Fon rangi */
+}
+
+h1 {
+    text-align: center; /* Matnni markazga qo'yish */
+    color: #333; /* Matn rangi */
+}
+
+/* Qidiruv maydoni */
+form {
+    display: flex; /* Flexbox yordamida joylashish */
+    justify-content: center; /* O'rtaga joylashish */
+    margin: 20px 0; /* Yuqoridan va pastdan margin */
+}
+
+input[type="text"] {
+    padding: 10px; /* Ichki padding */
+    width: 390px; /* Kenglik */
+    border: 1px solid #ccc; /* Chegarani belgilash */
+    border-radius: 16px; /* Burchaklarni yumshatish */
+    margin-right: 10px; /* O'ngdan margin */
+}
+
+button {
+    margin-left: 7px;
+    padding: 12px 17px; /* Ichki padding */
+    background-color: #4cae4c; /* Tugma rangi */
+    color: white; /* Matn rangi */
+    border: none; /* Chegara olib tashlangan */
+    border-radius: 5px; /* Burchaklarni yumshatish */
+    cursor: pointer; /* Kursorni o'zgartirish */
+    transition: background-color 0.3s; /* Rangni o'zgartirish uchun o'zgarish */
+}
+
+button:hover {
+    background-color: #4cae4c; /* Tugma ustida turganda rang o'zgarishi */
+}
+
+/* Kitoblar ro'yxati */
+ul {
+    list-style-type: none; /* Ro'yxat belgilarini olib tashlash */
+    padding: 0; /* Ichki paddingni olib tashlash */
+    max-width: 500px; /* Maksimal kenglik */
+    margin: 0 auto; /* O'rtaga joylashish */
+}
+
+li {
+    background-color: #fff; /* Har bir ro'yxat elementining foni */
+    padding: 10px; /* Ichki padding */
+    margin: 10px 0; /* Yuqoridan va pastdan margin */
+    border-radius: 15px; /* Burchaklarni yumshatish */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soyali ko'rinish */
+}
+
+/* Bog'lanish tugmasi */
+.link-container {
+    text-align: center; /* Markazga joylashish */
+    margin-top: 20px; /* Yuqoridan margin */
+}
+
+.link-button {
+    display: inline-block; /* Inline-block usulida ko'rsatish */
+    padding: 10px 15px; /* Ichki padding */
+    background-color: #007bff; /* Tugma rangi */
+    color: white; /* Matn rangi */
+    border: none; /* Chegara olib tashlangan */
+    border-radius: 5px; /* Burchaklarni yumshatish */
+    text-decoration: none; /* Ostki chizishni olib tashlash */
+    transition: background-color 0.3s; /* Rangni o'zgartirish uchun o'zgarish */
+}
+
+.link-button:hover {
+    background-color: #0056b3; /* Tugma ustida turganda rang o'zgarishi */
+}

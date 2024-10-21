@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yxatdan o'tish formasi:</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'library/forma.css' %}">
+</head>
+<body>
+    <h1>Registration:</h1>
+
+    {% if success %}
+        <p style="color: green;">Sizning ma'lumotlaringiz muvaffaqiyatli saqlandi.</p>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label >To'liq ism:</label>
+            {{ form.full_name }}  <!-- Bu joyda id avtomatik belgilanadi -->
+        </div>
+        <div>
+            <label>Yosh:</label>
+            {{ form.age }}  <!-- Bu joyda id avtomatik belgilanadi -->
+        </div>
+        <div>
+            <label>Telefon raqam:</label>
+            {{ form.phone }}  <!-- Bu joyda id avtomatik belgilanadi -->
+        </div>
+        <div>
+            <label>Manzil:</label>
+            {{ form.address }}  <!-- Bu joyda id avtomatik belgilanadi -->
+        </div>
+        <div>
+            <button type="submit">Yuborish</button>
+        </div>
+    </form>
+
+    <div class="link-container">
+        <a href="{% url 'main_page' %}" class="link-button">Main_page ga o'tish</a>  <!-- 'books' URL nomi bilan bog'lanish -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users List</title>
+    {% load static %}  <!-- Static fayllarni yuklash -->
+    <link rel="stylesheet" type="text/css" href="{% static 'library/users_list.css' %}"> <!-- CSS faylini ulash -->
+</head>
+<body>
+    <h1>Users List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.full_name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.address }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No users found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- Main page ga o'tish uchun link -->
+    <div class="link-container">
+        <a href="{% url 'main_page' %}" class="link-button">Main Page ga o'tish</a>
+    </div>
+</body>
+</html>

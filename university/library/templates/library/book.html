@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book.title</title>
+</head>
+<body>
+    <h1> {{ book.title }} </h1>
+    <p> by {{ book.author }}</p>
+    <div class="link-container">
+        <a href="{% url 'main_page' %}" class="link-button">Main page gao'tish</a>  <!-- 'books' URL nomi bilan bog'lanish -->
+    </div>
+</body>
+</html>

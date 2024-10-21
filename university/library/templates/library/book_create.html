@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Book</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'library/book_create.css' %}">
+</head>
+<body>
+    <h1>Add a new book</h1>
+
+    {% if success %}
+        <p style="color: green;">Ma'lumotlar muvaffaqiyatli saqlandi.</p>
+    {% else %}
+        <p style="color: red;">Iltimos, shaklni to'g'ri to'ldiring.</p>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">  <!-- Fayl yuklash qo'llab-quvvatlanadi -->
+        {% csrf_token %}
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" placeholder="Kitob nomi" value="{{ form.title.value|default_if_none:'' }}">
+        </div>
+
+        <div>
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" placeholder="Muallif" value="{{ form.author.value|default_if_none:'' }}">
+        </div>
+
+        <div>
+            <label for="count">Count:</label>
+            <input type="number" name="count" id="count" placeholder="Kitob soni" value="{{ form.count.value|default_if_none:'' }}">
+        </div>
+
+        <div>
+            <label for="pages">Pages:</label>
+            <input type="number" name="pages" id="pages" placeholder="Sahifalar soni" value="{{ form.pages.value|default_if_none:'' }}">
+        </div>
+
+        <div>
+            <label for="book_file">Book File:</label>
+            <input type="file" name="book_file" id="book_file">  <!-- Fayl yuklash -->
+        </div>
+
+        {{ form.non_field_errors }}  <!-- Forma bo'yicha xatolar -->
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="link-container">
+        <a href="{% url 'main_page' %}" class="link-button">Main Page ga o'tish</a>
+    </div>
+</body>
+</html>

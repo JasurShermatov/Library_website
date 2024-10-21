@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*body {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    flex-direction: column;*/
+/*    font-family: Arial, sans-serif;*/
+/*    line-height: 1.6;*/
+/*    padding-top: 68px;*/
+/*    min-height: calc(100vh - 68px - 66px);*/
+
+/*}*/
+
+nav {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 5%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #007bff;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 15px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }}
+
+
+
+/* Footer uslublari */
+footer {
+
+    /* Matn rangi */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center; /* Markazga joylashtirish */
+    padding: 0 0 40px 0; /* Padding */
+    margin-top: 20px; /* Footer va yuqoridagi element o'rtasidagi bo'shliq */
+    width: 100%; /* Kengligi 100% */
+
+}
+
+
+/* Footer ichidagi matn */
+footer h3 {
+color: #000000;     font-size: 16px; /* Matn o'lchami */
+    margin: 0; /* Marginni 0 ga o'rnatish */
+}
+
+
+

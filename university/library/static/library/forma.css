@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+p {
+    text-align: center;
+}
+
+.link-container {
+    text-align: center;  /* Markazlashtirish */
+    margin-top: 20px;  /* Yuqoridan bo'sh joy */
+}
+
+.link-button {
+    display: inline-block;  /* Inline-block sifatida ko'rsatish */
+    padding: 10px 20px;  /* Yuqoridan va pastdan bo'sh joy */
+    background-color: #007bff;  /* Tugma fon rangi */
+    color: white;  /* Matn rangi */
+    border-radius: 5px;  /* Burchaklarni yumshatish */
+    text-decoration: none;  /* Chiziqni olib tashlash */
+}
+
+.link-button:hover {
+    background-color: #0056b3;  /* Hover holati uchun fon rangi */
+}
