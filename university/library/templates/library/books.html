@@ -22,7 +22,7 @@
             <strong>{{ book.title }}</strong> by {{ book.author }}<br>
             Pages: {{ book.pages }}<br>
             {% if book.book_file %}
-                <a href="{{ book.book_file.url }}" download >Download Book</a>  <!-- Kitobni yuklab olish tugmasi -->
+                <a href="{{ book.book_file.url }}" download>Download Book</a>  <!-- Kitobni yuklab olish tugmasi -->
             {% else %}
                 <span>No file available</span>  <!-- Agar fayl yo'q bo'lsa -->
             {% endif %}
